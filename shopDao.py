@@ -1,4 +1,5 @@
 import mysql.connector
+import dbConfig as cfg
 
 #classes start with capitals in python need to change 
 class shopDao:
@@ -7,10 +8,10 @@ class shopDao:
     # https://docs.python.org/3/tutorial/classes.html
     def __init__(self):
         self.db = mysql.connector.connect(
-            host = 'localhost',
-            user = 'root',
-            password = '',
-            database = 'datarepresentation'
+            host = cfg.mysql['host'],
+            user = cfg.mysql['user'],
+            password = cfg.mysql['password'],
+            database = cfg.mysql['database']
         )
         
         
