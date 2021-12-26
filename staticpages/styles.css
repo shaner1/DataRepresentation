@@ -1,0 +1,91 @@
+
+
+/*sets styling for head element*/
+#head{
+/*
+    sets font family for element with class = head
+    font-family: Garamond, Times, serif;
+*/
+    /*font size is 350 % bigger then normal element size*/
+    font-size: 350%;
+    /*sets elemt background colour*/
+    background-color: #89c1fa;
+    /*sets border size*/
+    border: 3px solid #3f424030;
+    /*akes the font bold*/
+    font-weight: bold;
+    /*sets margin size*/
+    margin-top: 50px;
+    /*sets text colour*/
+    color: #3f4042;
+    /*centers text*/
+    text-align: center;
+    /*adds a shadow to the text*/
+    text-shadow: 1px 5px 6px #d3d3d390;
+    border-radius: 25px;
+    }
+
+/*sets styling for subhead element*/
+#subhead{
+    font-size: 150%;
+    padding-bottom: 10px;
+    padding-bottom: 20px;
+    color: #3f4240;
+    text-align: center;
+    text-shadow: 1px 5px 6px #d3d3d380;
+    }
+
+nav{
+    text-align: center;    
+}
+
+/*sets styling for nav menu items element*/
+li{
+    /*sets the width for the menu items*/
+    width: 33%;
+    /*changes the display of the menu items to inline block elements*/
+    display: inline-block;
+    border: 1px solid #3f424010;
+    background-color: #89c1fa;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*sets styling for nav menu links*/
+li a {
+    color: #3f4240;
+    /*removes bullet points from menu items*/
+    text-decoration: none;
+}
+
+/*sets styling for unvisited nav menu links*/
+a:link {
+    color: #d2d2d2;
+}
+
+
+/*sets styling for when cursor hovers over nav menu links*/
+a:hover {
+    /*nav menu items will be underlined when cursor hovers over*/
+    text-decoration: underline;
+}
+
+/*sets styling for visited nav menu links*/
+a:visited{
+    /*set colour for visited nav menu visited links*/
+    color: darkslategrey;
+}
+
+/*sets styling paragraph elements*/
+p{
+    
+    padding: 10px;
+    text-align:justify;
+}
+
+/*sets styling for chart bars*/
+rect:hover{
+    /*changes the colour of the bars in the array chart when cursor hovers over*/
+    fill: blue;
+}
