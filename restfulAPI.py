@@ -1,32 +1,46 @@
+#Author: Shane Rylands
+#Student id: G00387904
+
+#File contains the RESTful API which uses flask to make my database available online
+
+#------------------------
+#import flask and make shopDAO available
 
 from flask import Flask, url_for, request, redirect, abort, jsonify
 from shopDao import shopDao
 
-#you direct the server to where the web page is held
-#app = Flask(__name__, static_url_path='', static_folder='.')
+#you direct the server to where the web pages are held
 app = Flask(__name__, static_url_path='', static_folder='staticpages')
 
+
+#------------------------
 # index
 
 @app.route('/')
 def index():
     return "Hello World\n"
+#------------------------
 
+#------------------------
 # Get all
 
 @app.route('/stock')
 def getAll():
     return jsonify(shopDao.getAll())
+#------------------------
 
+#------------------------
 # Find by ID
 
 @app.route('/stock/<int:id>')
 def findById(id):   
     return jsonify(shopDao.findById(id))
+#------------------------
 
+#------------------------
 # Create
 
-# curl -X POST -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":30}" -H Content-Type:application/json http://127.0.0.1:5000/stock
+# Troubleshooting: curl -X POST -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":30}" -H Content-Type:application/json http://127.0.0.1:5000/stock
 # floating points needs to be treated as strings in JSON
 @app.route('/stock', methods=['POST'])
 def create():
@@ -43,11 +57,12 @@ def create():
     return jsonify(shopDao.create(stockItem))
 
 #   return "served by Create "
+#------------------------
 
+#------------------------
+# Update
 
-## Update
-
-# curl -X PUT -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":40}" -H Content-Type:application/json http://127.0.0.1:5000/stock/2
+# Troubleshooting: curl -X PUT -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":40}" -H Content-Type:application/json http://127.0.0.1:5000/stock/2
 
 @app.route('/stock/<int:id>', methods=['PUT'])
 def update(id):
@@ -65,12 +80,12 @@ def update(id):
     shopDao.update(currentStockItem)
           
     return jsonify(currentStockItem)
+#------------------------
 
-
-
+#------------------------
 # Delete
 
-# curl -X DELETE http://127.0.0.1:5000/stock/5
+# Troubleshooting: curl -X DELETE http://127.0.0.1:5000/stock/5
 
 @app.route('/stock/<int:id>', methods=['DELETE'])
 def delete(id):
@@ -81,8 +96,10 @@ def delete(id):
     shopDao.delete(id)
     return jsonify({"done":True})
 
+#------------------------
 
-#---------
+#------------------------
+#2nd DB tabel
 
 # curl -X POST -d "{\"product\":\"apple\",\"quantity\":5}" -H Content-Type:application/json http://127.0.0.1:5000/shoppingList
 
@@ -98,13 +115,18 @@ def add():
         "quantity":request.json["quantity"]
     }                                                  
     return jsonify(shopDao.add(shoppingItem))
+#------------------------
 
 
 
+#------------------------
+#Main method
 
 if __name__ == "__main__":
     print("in if")
     app.run(debug=True) 
+    
+#------------------------
     
     
 #To Do 

@@ -1,11 +1,34 @@
+body{
+    /* automatically adjusts the margin */
+    margin: auto;
+    /* sets height 75% of full height*/
+    height: 75%;
+    /* sets width 75% of full height*/
+    width: 75%;
+    /* text will be scollable if it overflows from container*/
+    overflow: scroll;
+}
 
+#user{
+    padding-right: 30px;
+    margin-top: 15px;
+    text-align: right;
+            
+        }  
 
-/*sets styling for head element*/
+#cart{
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-top: 15px;
+    text-align: center;
+            
+        }  
+        /*sets styling for head element*/
 #head{
-/*
-    sets font family for element with class = head
-    font-family: Garamond, Times, serif;
-*/
+    margin: auto;
+    height: 75%;
+    /* sets width 75% of full height*/
+    width: 75%;
     /*font size is 350 % bigger then normal element size*/
     font-size: 350%;
     /*sets elemt background colour*/
@@ -28,7 +51,7 @@
 /*sets styling for subhead element*/
 #subhead{
     font-size: 150%;
-    padding-bottom: 10px;
+    padding-top: 40px;
     padding-bottom: 20px;
     color: #3f4240;
     text-align: center;
@@ -42,13 +65,14 @@ nav{
 /*sets styling for nav menu items element*/
 li{
     /*sets the width for the menu items*/
-    width: 33%;
+    width: 15%;
     /*changes the display of the menu items to inline block elements*/
     display: inline-block;
     border: 1px solid #3f424010;
     background-color: #89c1fa;
     padding: 8px;
     text-align: center;
+    font-weight: bold;
     border-radius: 10px;
 }
 
@@ -64,7 +88,6 @@ a:link {
     color: #d2d2d2;
 }
 
-
 /*sets styling for when cursor hovers over nav menu links*/
 a:hover {
     /*nav menu items will be underlined when cursor hovers over*/
@@ -75,17 +98,4 @@ a:hover {
 a:visited{
     /*set colour for visited nav menu visited links*/
     color: darkslategrey;
-}
-
-/*sets styling paragraph elements*/
-p{
-    
-    padding: 10px;
-    text-align:justify;
-}
-
-/*sets styling for chart bars*/
-rect:hover{
-    /*changes the colour of the bars in the array chart when cursor hovers over*/
-    fill: blue;
 }

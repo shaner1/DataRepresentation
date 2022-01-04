@@ -28,8 +28,8 @@ CRUD operations on the data.
 
 ## Table of Contents
 
-- Scikit-Learn ipynb
-- SciPy ipynb
+-
+- 
 - ReadMe.md
 - gitignore
 - requirements.txt
@@ -59,6 +59,11 @@ To exit the VM type deactivate.
 
 ***
 
+## Run API
+
+Once you have the API up and running all you need to do is open a web browswer and type:
+`http://127.0.0.1:5000/index.html`
+
 ## Conclusion
 
 In conclusion,
@@ -66,7 +71,15 @@ In conclusion,
 
 ## Troubleshooting
 
-If you encounter errors with this project please contact me at [G00387904@gmit.ie](mailto) and I will be happy to assist you in any way I can.
+If you are unable to access any data from the web application, please check the DAO is working with curl. 
+For testing the create method:
+`curl -X POST -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":30}" -H Content-Type:application/json http://127.0.0.1:5000/stock`
+For testing the update method:
+`curl -X PUT -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":40}" -H Content-Type:application/json http://127.0.0.1:5000/stock/2`
+For testing the delete method:
+`curl -X DELETE http://127.0.0.1:5000/stock/5`
+
+If you encounter any other errors with this project please contact me at [G00387904@gmit.ie](mailto) and I will be happy to assist you in any way I can.
 
 ***
 
