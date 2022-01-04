@@ -14,7 +14,7 @@ cursor = db.cursor()
 #print("Database created")
 
 
-# The SQL is creating the table inside the database and adding the columns needed.
+
 sql = "CREATE TABLE stock (id INT NOT NULL AUTO_INCREMENT, product varchar(255), price float, quantity int, primary key (id))"
 cursor.execute(sql)
 db.commit()
