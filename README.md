@@ -72,7 +72,7 @@ You will also need to apply the appropriate configurations. Within the repo is a
     'password':'',
     'database':'datarepresentation'
     
-To set up mySQL please run the set_up_sql.py file. You can do this from the CLI while you are within the folder of the repo and type `python set_up_sql`. This should create a database and 2 tables, one called stock and the other shoppingList. If that does not work here is the code to create the db and tables manually:
+To set up mySQL please run the set_up_sql.py file. You can do this from the CLI while you are within the folder of the repo and type `python set_up_sql`. This should create 2 tables, one called stock and the other shoppingList. If you do not have a database called datarepresentation please uncomment lines 12 - 14 in the python file. If that does not work here is the code to create the db and tables manually:
 
 ```sql CREATE DATABASE datarepresentation```
 

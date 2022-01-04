@@ -9,9 +9,9 @@ db = mysql.connector.connect(
 )
         
 cursor = db.cursor()
-cursor.execute("CREATE DATABASE datarepresentation1")
-
-print("Database created")
+#cursor.execute("CREATE DATABASE datarepresentation1")
+#
+#print("Database created")
 
 
 # The SQL is creating the table inside the database and adding the columns needed.
@@ -28,5 +28,5 @@ print("Table created")
 
 sql = "INSERT INTO stock (id,product,price,quantity) values(1,'coke can',1.80,20)"
 cursor.execute(sql)
-self.db.commit()
+db.commit()
 print("Value created")
