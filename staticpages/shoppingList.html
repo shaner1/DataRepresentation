@@ -1,3 +1,8 @@
+<!--
+ Author: Shane Rylands
+ Student id: G00387904
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -76,7 +81,7 @@
         function populateTable(){
             //ajax getAll
             $.ajax({
-                url:'/shoppingList',
+                url:'http://127.0.0.1:5000/shoppingList',
                 method:'GET',
                 dataType:'JSON',
                 success:function(results){

@@ -98,13 +98,25 @@ def delete(id):
 
 #------------------------
 
+
+#------------------------
+# DB2 methods 
+
+#------------------------
+# Get all DB2
+
+@app.route('/shoppngList')
+def get_all_shop():
+    return jsonify(shopDao.getAllshop())
+#------------------------
+
 #------------------------
 #2nd DB tabel
 
 # curl -X POST -d "{\"product\":\"apple\",\"quantity\":5}" -H Content-Type:application/json http://127.0.0.1:5000/shoppingList
 
 @app.route('/shoppingList', methods=['POST'])
-def add():
+def add_shop():
     
     # error handling for when no json
     if not request.json:
@@ -114,7 +126,21 @@ def add():
         "product":request.json["product"],
         "quantity":request.json["quantity"]
     }                                                  
-    return jsonify(shopDao.add(shoppingItem))
+    return jsonify(shopDao.addshop(shoppingItem))
+#------------------------
+
+#------------------------
+# empty cart 
+
+@app.route('/shoppingList/<int:id>', methods=['DELETE'])
+def empty_cart(id):
+    #error handling IF NO BOOK EXISTS
+#    foundStockItem = shopDao.findById(id)
+#    if foundStockItem == {}:
+#        return jsonify({}),404
+    shopDao.emptyCart(id)
+    return jsonify({"done":True})
+
 #------------------------
 
 

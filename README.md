@@ -28,11 +28,17 @@ CRUD operations on the data.
 
 ## Table of Contents
 
--
-- 
+- staticpages folder:
+    - index.html
+    - shopping_list.html
+    - login.html
+    - stlyes.css
+- restfulAPI.py
+- shopDao.py
 - ReadMe.md
 - gitignore
 - requirements.txt
+- img folder
 
 ***
 
@@ -64,9 +70,13 @@ To exit the VM type deactivate.
 Once you have the API up and running all you need to do is open a web browswer and type:
 `http://127.0.0.1:5000/index.html`
 
+***
+
 ## Conclusion
 
 In conclusion,
+
+The styling of the static pages changes whether openen directly or through the restful api and I couldn'f figure out why.
 ***
 
 ## Troubleshooting

@@ -84,7 +84,19 @@ class shopDao:
     
 #--------
 
-    def add(self, shoppingItem):
+    def get_all_shop(self):
+        cursor = self.db.cursor()
+        sql = 'select * from shoppingList'
+        cursor.execute(sql)
+        results = cursor.fetchall()
+        returnArray = []
+#       print(results) 
+        for result in results:
+            resultAsDict = self.convertToDict(result)
+            returnArray.append(resultAsDict)       
+        return returnArray 
+
+    def add_shop(self, shoppingItem):
         cursor = self.db.cursor()
         sql = "insert into shoppingList( product, quantity) values ( %s, %s)"
         values = [
@@ -94,6 +106,13 @@ class shopDao:
         cursor.execute(sql, values)
         self.db.commit()
         return cursor.lastrowid
+    
+    def empty_cart(self):
+        cursor = self.db.cursor()
+        sql = 'delete from shoppingList'
+        cursor.execute(sql)
+        self.db.commit()
+        return{}
 
     
 shopDao = shopDao()
