@@ -74,23 +74,11 @@ You will also need to apply the appropriate configurations. Within the repo is a
     
 Within your database you will need 2 tables, one called stock and the other shoppingList. The configuration for these tables is:
 
-[describe stock](img/stock.jpeg)
-```sql
-create table stock 
-(
-id int, product varchar(255), 
-price float, 
-quantity int, 
-primary key = id
-);```
+[](img/stock.jpeg)
+```sql create table stock (id int, product varchar(255), price float, quantity int, primary key = id);```
 
-[describe shoppingList](img/shoppingList.jpeg)
-```sql
-create table shoppingList
-(
-product varchar(255),   
-price float
-);```
+[](img/shoppingList.jpeg)
+```sql create table shoppingList(product varchar(255), price float);```
 
 ***
 
