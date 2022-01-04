@@ -77,7 +77,7 @@ To set up mySQL please run the set_up_sql.py file. You can do this from the CLI 
 ```sql CREATE DATABASE datarepresentation```
 
 [stock describe](img/stock.jpeg)
-```sql create table stock (id int, product varchar(255), price float, quantity int, primary key = id);```
+```sql create table stock (id int, product varchar(255), price float, quantity int, primary key (id));```
 
 [shoppingList describe](img/shoppingList.jpeg)
 ```sql create table shoppingList(product varchar(255), price float);```
