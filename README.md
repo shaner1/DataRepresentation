@@ -72,13 +72,17 @@ You will also need to apply the appropriate configurations. Within the repo is a
     'password':'',
     'database':'datarepresentation'
     
-Within your database you will need 2 tables, one called stock and the other shoppingList. The configuration for these tables is:
+To set up mySQL please run the set_up_sql.py file. You can do this from the CLI while you are within the folder of the repo and type `python set_up_sql`. This should create a database and 2 tables, one called stock and the other shoppingList. If that does not work here is the code to create the db and tables manually:
+
+```sql CREATE DATABASE datarepresentation```
 
 [stock describe](img/stock.jpeg)
 ```sql create table stock (id int, product varchar(255), price float, quantity int, primary key = id);```
 
 [shoppingList describe](img/shoppingList.jpeg)
 ```sql create table shoppingList(product varchar(255), price float);```
+
+```sql INSERT INTO stock (id,product,price,quantity) values(1,'coke can',1.80,20);```
 
 ***
 
@@ -91,7 +95,7 @@ Once you have the API up and running all you need to do is open a web browswer a
 
 ## Conclusion
 
-In conclusion, Im not completely happy with my submission. I wanted add a second table that users could write to and create a shopping list but didnt work. I kept getting 404 errors when trying to access a second database. The styling of the static pages changes whether opened directly or through the restful api and I couldn'f figure out why.
+In conclusion, Im not completely happy with my submission. I wanted add a second table that users could write to and create a shopping list but didnt work. I kept getting 404 errors when trying to access a second database. The styling of the static pages changes whether opened directly or through the restful api and I couldn'f figure out why. I tried to get python anywhere working but couldnt: #http://shaner1.pythonanywhere.com/.
 ***
 
 ## Troubleshooting

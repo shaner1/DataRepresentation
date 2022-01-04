@@ -116,3 +116,8 @@ class shopDao:
 
     
 shopDao = shopDao()
+
+#to run on python anywhere 
+#http://shaner1.pythonanywhere.com/
+#if__main__ == '__main__':
+#    app.run(debug=True)
