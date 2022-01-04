@@ -46,7 +46,7 @@
         </nav>
         <!-- End navigation menu -->
         
-        
+        <!-- Stock List -->
         <div id = "createUpdate" style="display: none">
               <h2>create/edit</h2>
                <table id="createUpdateTable">
@@ -75,7 +75,9 @@
                         <button onclick="window.location.reload();">Return</button>
                  </div>
             </div>
+            <!-- End Stock List -->
         
+        <!-- Create Menu -->
         <div id = "display">
             <button onclick="showCreate()">Create</button>
             <table class="table" id="StockItemList">
@@ -89,12 +91,16 @@
                 </tr>
             </table>
         </div>
+        <!-- End Create Menu -->
+        
     </body>
     
 
     <script>
         
-//      will show the create button 
+//-------------Create------------------- 
+        
+        // will show the create button 
         function showCreate(){
             document.getElementById('ID').style.display = 'none'
             document.getElementById('display').style.display = 'none'
@@ -102,7 +108,7 @@
             document.getElementById('createButton').style.display = 'block'
             document.getElementById('createUpdate').style.display = 'block'
         }
-        
+        // will show the update button 
         function showUpdate(thisElement){
             var rowElement = thisElement.parentNode.parentNode;
             stockItem = getStockItemFromRow(rowElement)
@@ -114,7 +120,7 @@
             document.getElementById('createButton').style.display = 'none'
             document.getElementById('createUpdate').style.display = 'block'
         }
-        
+        // will get the row content 
         function getStockItemFromRow(rowElement){
             stockItem = {}
             stockItem.id = rowElement.getAttribute("id");
@@ -124,7 +130,7 @@
             
             return stockItem
         }
-        
+        // will fill table row by row 
         function populateForm(stockItem){
             var form = document.getElementById('createUpdateTable')
             
