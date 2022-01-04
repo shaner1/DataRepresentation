@@ -74,10 +74,10 @@ You will also need to apply the appropriate configurations. Within the repo is a
     
 Within your database you will need 2 tables, one called stock and the other shoppingList. The configuration for these tables is:
 
-[](img/stock.jpeg)
+[stock describe](img/stock.jpeg)
 ```sql create table stock (id int, product varchar(255), price float, quantity int, primary key = id);```
 
-[](img/shoppingList.jpeg)
+[shoppingList describe](img/shoppingList.jpeg)
 ```sql create table shoppingList(product varchar(255), price float);```
 
 ***
@@ -97,12 +97,14 @@ In conclusion, Im not completely happy with my submission. I wanted add a second
 ## Troubleshooting
 
 If you are unable to access any data from the web application, please check the DAO is working with curl. 
-For testing the create method:
-`curl -X POST -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":30}" -H Content-Type:application/json http://127.0.0.1:5000/stock`
-For testing the update method:
-`curl -X PUT -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":40}" -H Content-Type:application/json http://127.0.0.1:5000/stock/2`
-For testing the delete method:
-`curl -X DELETE http://127.0.0.1:5000/stock/5`
+- For testing the create method:
+    `curl -X POST -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":30}" -H Content-Type:application/json http://127.0.0.1:5000/stock`
+
+- For testing the update method:
+    `curl -X PUT -d "{\"product\":\"apple\",\"price\":\"0.80\",\"quantity\":40}" -H Content-Type:application/json http://127.0.0.1:5000/stock/2`
+
+- For testing the delete method:
+    `curl -X DELETE http://127.0.0.1:5000/stock/5`
 
 If you encounter any other errors with this project please contact me at [G00387904@gmit.ie](mailto) and I will be happy to assist you in any way I can.
 
